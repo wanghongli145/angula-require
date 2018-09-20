@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .commonHide{display:none;}
+    .test1{padding: 10px 20px;outline:none;border:1px solid; border-radius:5px;cursor:pointer;}
+    </style>
+    <script data-main="main.js" src="js/lib/requirejs/require.js"></script>
+    <script>
+      // define(['angular'], function(angular) {
+      //   return angular.module('app', [
+      //     'controllers'
+      //   ]);
+      // });
+      // require([
+      //   'js/lib/jquery/dist/jquery',
+      //   'js/lib/bower-angularjs/angular',
+      //   'js/a'
+      // ],function() {
+      //   $(function () {
+      //     $('.commonHide').show();
+      //     console.log('load finished');
+      //   })
+      // });
+      // define(['angular', 'app'], function(angular, domReady) {
+      //   // require(['domReady!'], function(document) {
+      //     angular.bootstrap(document, ['app']);
+      //   // });
+      // });
+      function test1() {
+        alert('test1');
+      }
+    </script>
+  </head>
+  <body>
+<div class="" id="app-root">
+    <button class="test1" onclick="test1()"> test1 </button>
+      <div ng-app="myApp" ng-controller="myCtrl">
+
+        名: <input type="text" ng-model="firstName"><br>
+        姓: <input type="text" ng-model="lastName"><br>
+        <br>
+        姓名: {{firstName + " " + lastName}}
+
+      </div>
+
+    </div>
+  
+  </body>
+</html>
