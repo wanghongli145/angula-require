@@ -8,7 +8,7 @@ require.config({
     'angular-route': 'lib/bower-angularjs/angular-route.min',
     'app': 'app',
     'controller1': 'controller/controller1',
-    'route': 'routes/route'
+    'route': 'route/route'
   },
   shim: {
     'angular': {
@@ -17,7 +17,7 @@ require.config({
     'angular-route': {
       deps: ['angular'],
       exports: 'angular-route'
-    },
+    }
   },
   deps: ['app']
 });
