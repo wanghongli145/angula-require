@@ -8,6 +8,7 @@ require.config({
     'angular-route': 'lib/bower-angularjs/angular-route.min',
     'app': 'app',
     'controller1': 'controller/controller1',
+    'controller2': 'controller/controller2',
     'route': 'route/route'
   },
   shim: {
@@ -21,9 +22,7 @@ require.config({
   },
   deps: ['app']
 });
-require(['jquery', 'angular', 'angular-route', 'app', 'controller1', 'route'], function ($, angular) {
-  console.log($);
-  console.log(angular);
+require(['jquery', 'angular', 'angular-route', 'app', 'controller1', 'controller2', 'route'], function ($, angular) {
   $(function () {
     console.log($);
     console.log(angular);

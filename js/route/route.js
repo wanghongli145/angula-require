@@ -8,6 +8,10 @@ define(['app'], function (app) {
         templateUrl: 'views/a.html',
         controller: 'myCtrl'
       })
+      .when('/b', {
+        templateUrl: 'views/b.html',
+        controller: 'myCtrl2'
+      })
       .otherwise({
         redirectTo: '/a'
       });
