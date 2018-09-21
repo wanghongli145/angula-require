@@ -5,25 +5,32 @@ require.config({
   paths: {
     'jquery': 'lib/jquery/dist/jquery',
     'angular': 'lib/bower-angularjs/angular.min',
+    'angular-route': 'lib/bower-angularjs/angular-route.min',
     'app': 'app',
-    'controller1': 'controller/controller1'
+    'controller1': 'controller/controller1',
+    'route': 'routes/route'
   },
   shim: {
     'angular': {
-      exports: 'angular',
-      deps: ['jquery']
-    }
+      exports: 'angular'
+    },
+    'angular-route': {
+      deps: ['angular'],
+      exports: 'angular-route'
+    },
   },
   deps: ['app']
 });
-require(['jquery', 'angular', 'app', 'controller1'], function ($, angular) {
+require(['jquery', 'angular', 'angular-route', 'app', 'controller1', 'route'], function ($, angular) {
   console.log($);
   console.log(angular);
   $(function () {
-    // angular.bootstrap(document, ["myApp"]); //初始化整app
-    angular.bootstrap(document.getElementById('app-root'), ['myApp'], {
-      debugInfoEnabled: true
-    });
+    console.log($);
+    console.log(angular);
+    angular.bootstrap(document, ["myApp"]); //初始化整app
+    // angular.bootstrap(document.getElementById('app-root'), ['myApp'], {
+    //   debugInfoEnabled: true
+    // });
   })
 
 });
